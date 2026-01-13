@@ -39,9 +39,9 @@ export function Header() {
             <Image
               src="/logo.svg"
               alt="class-E"
-              width={160}
-              height={90}
-              className="h-10 w-auto"
+              width={200}
+              height={112}
+              className="h-14 w-auto"
               priority
             />
           </Link>
