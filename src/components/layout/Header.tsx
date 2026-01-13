@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "./Container";
 import { Button } from "@/components/ui/Button";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -34,13 +35,15 @@ export function Header() {
       <Container>
         <nav className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-white font-bold text-lg">E</span>
-            </div>
-            <span className="font-bold text-xl text-primary hidden sm:block">
-              class-E
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.svg"
+              alt="class-E"
+              width={160}
+              height={90}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
