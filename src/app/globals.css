@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
+/* ========================================
+   SRCG Tool Design System - Tailwind v4
+   ======================================== */
+
+@theme inline {
+  /* Primary Colors - Deep Blue */
+  --color-primary-50: #E8EDF3;
+  --color-primary-100: #D1DBE7;
+  --color-primary-200: #A3B7CF;
+  --color-primary-300: #7593B7;
+  --color-primary-400: #476F9F;
+  --color-primary-500: #1E3A5F;
+  --color-primary-600: #1A3254;
+  --color-primary-700: #152A47;
+  --color-primary-800: #11223A;
+  --color-primary-900: #0C1A2D;
+  --color-primary: #1E3A5F;
+
+  /* Accent Colors - Orange */
+  --color-accent-50: #FDF3EC;
+  --color-accent-100: #FCE7D9;
+  --color-accent-200: #F9CFB3;
+  --color-accent-300: #F5B78D;
+  --color-accent-400: #F29F67;
+  --color-accent-500: #E87722;
+  --color-accent-600: #D16A1E;
+  --color-accent-700: #AE5819;
+  --color-accent-800: #8B4614;
+  --color-accent-900: #68350F;
+  --color-accent: #E87722;
+
+  /* Neutral Colors */
+  --color-neutral-50: #FAFAFA;
+  --color-neutral-100: #F5F5F5;
+  --color-neutral-200: #E5E5E5;
+  --color-neutral-300: #D4D4D4;
+  --color-neutral-400: #A3A3A3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+
+  /* Semantic Colors */
+  --color-success: #22C55E;
+  --color-success-light: #DCFCE7;
+  --color-warning: #F59E0B;
+  --color-warning-light: #FEF3C7;
+  --color-error: #EF4444;
+  --color-error-light: #FEE2E2;
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Custom Border Radius */
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
+
+  /* Custom Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-card-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+  --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Animation */
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Base Styles */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utility classes */
+.animate-float {
+  animation: var(--animate-float);
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out 2s infinite;
 }
