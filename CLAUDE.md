@@ -4,6 +4,27 @@
 
 This is the **class-E** marketing website - a contractor and workforce management platform for specialty contractors in the construction industry.
 
+## Live URLs
+
+| Environment | URL |
+|-------------|-----|
+| Production | https://class-e.ai |
+| Production (www) | https://www.class-e.ai |
+| Vercel Preview | https://class-e-saul-mateos-projects.vercel.app |
+
+## Repository & Deployment
+
+- **GitHub**: https://github.com/saulmateos-ux/Class_E
+- **Vercel Project**: `class-e` (saul-mateos-projects)
+- **Domain Registrar**: Namecheap (class-e.ai)
+
+### DNS Configuration (Namecheap → Vercel)
+
+| Type | Host | Value |
+|------|------|-------|
+| A Record | @ | 76.76.21.21 |
+| CNAME Record | www | cname.vercel-dns.com |
+
 ## Tech Stack
 
 - **Framework**: Next.js 16 (App Router)
@@ -11,6 +32,7 @@ This is the **class-E** marketing website - a contractor and workforce managemen
 - **Language**: TypeScript
 - **Icons**: Lucide React
 - **Utilities**: clsx, tailwind-merge
+- **Deployment**: Vercel
 
 ## Project Structure
 
@@ -85,6 +107,19 @@ src/
 | `Integrations` | Integration grid + platforms |
 | `FinalCTA` | Closing call-to-action |
 
+### Header Navigation
+
+The header uses a simplified navigation structure with anchor links:
+
+| Link | Target |
+|------|--------|
+| Home | `#hero` |
+| Features | `#features` |
+| Why class-E | `#why-class-e` |
+| Who It's For | `#who-its-for` |
+
+CTA Button: "Get a Demo"
+
 ## Development Commands
 
 ```bash
@@ -99,6 +134,22 @@ npm run start
 
 # Lint code
 npm run lint
+```
+
+## Deployment Commands
+
+```bash
+# Deploy to Vercel (preview)
+vercel
+
+# Deploy to Vercel (production)
+vercel --prod
+
+# Check deployment status
+vercel ls
+
+# View project domains
+vercel domains ls
 ```
 
 ## Content Source
@@ -121,6 +172,8 @@ Original content specification: `/Users/saulmateos/Documents/strategIQ/Projects/
 ## Important Notes
 
 - Brand name is **class-E** (not SRCG Tool)
+- Website: https://class-e.ai
 - Email: sales@class-e.com
 - Backed by Davis Family Office (DFO)
 - Target audience: Specialty contractors with 20-500 workers, $2M-$50M revenue
+- Logo: Custom SVG at `/public/logo.svg` (1066x600px source, displayed h-12 lg:h-16)

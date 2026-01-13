@@ -6,7 +6,7 @@ import { Play, ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-neutral-50 pt-32 pb-20 lg:pt-40 lg:pb-32">
+    <section id="hero" className="relative overflow-hidden bg-neutral-50 pt-32 pb-20 lg:pt-40 lg:pb-32">
       {/* Decorative Shapes */}
       <FloatingShape
         variant="circle"

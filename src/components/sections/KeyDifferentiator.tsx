@@ -32,7 +32,7 @@ const srcgBenefits = [
 
 export function KeyDifferentiator() {
   return (
-    <section className="py-20 lg:py-28 bg-primary text-white">
+    <section id="why-class-e" className="py-20 lg:py-28 bg-primary text-white">
       <Container>
         <SectionHeader
           title="The Gap Nobody Else Fills"

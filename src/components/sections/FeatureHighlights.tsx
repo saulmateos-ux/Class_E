@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 
 const features = [
   {
+    id: "workforce",
     title: "Employees and Contractors in One View",
     description:
       "Finally see your entire workforce in a single system. Track availability, skills, certifications, and assignments for both W2 employees and 1099 contractors.",
@@ -18,6 +19,7 @@ const features = [
     visual: "workforce",
   },
   {
+    id: "compliance",
     title: "Never Get Caught with Expired Credentials",
     description:
       "Track insurance certificates, licenses, OSHA certifications, and tax documents with automatic expiration alerts. Know your compliance status at a glance.",
@@ -30,6 +32,7 @@ const features = [
     visual: "compliance",
   },
   {
+    id: "time-tracking",
     title: "Field-Verified Hours, Zero Time Theft",
     description:
       "Workers clock in and out from their phones with GPS verification. Supervisors approve from the field. Hours flow directly to billing.",
@@ -42,6 +45,7 @@ const features = [
     visual: "timetracking",
   },
   {
+    id: "invoicing",
     title: "Bill Faster, Get Paid Sooner",
     description:
       "Create customer invoices directly from approved timesheets. Track payments, manage retainage, and export to your accounting system.",
@@ -54,6 +58,7 @@ const features = [
     visual: "invoicing",
   },
   {
+    id: "payments",
     title: "Pay Contractors Accurately, Every Time",
     description:
       "Manage vendor invoices, track contractor payments, and export to QuickBooks. No more spreadsheet reconciliation.",
@@ -66,6 +71,7 @@ const features = [
     visual: "payments",
   },
   {
+    id: "job-management",
     title: "Know Which Jobs Make Money—Before It's Too Late",
     description:
       "Track every job from planning through completion. See labor costs, materials, and margins in real-time.",
@@ -260,7 +266,7 @@ function FeatureVisual({ type }: { type: string }) {
 
 export function FeatureHighlights() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section id="features" className="py-20 lg:py-28 bg-white">
       <Container>
         <SectionHeader
           eyebrow="Features"
@@ -271,6 +277,7 @@ export function FeatureHighlights() {
         <div className="mt-16 space-y-20">
           {features.map((feature, index) => (
             <div
+              id={feature.id}
               key={feature.title}
               className={cn(
                 "grid lg:grid-cols-2 gap-12 items-center",

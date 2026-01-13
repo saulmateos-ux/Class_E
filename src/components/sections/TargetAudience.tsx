@@ -40,7 +40,7 @@ const audiences = [
 
 export function TargetAudience() {
   return (
-    <section className="py-20 lg:py-28 bg-neutral-50">
+    <section id="who-its-for" className="py-20 lg:py-28 bg-neutral-50">
       <Container>
         <SectionHeader
           eyebrow="Who We Serve"
